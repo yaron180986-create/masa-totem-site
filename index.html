@@ -304,23 +304,19 @@ nav,main,section,div.strip,footer,a.wa-float,div.lightbox{position:relative;z-in
   min-height:100vh;display:flex;align-items:center;justify-content:center;
   text-align:center;padding:68px var(--sp6) var(--sp16);
   position:relative;overflow:hidden;
-  background:#1A0A03;
+  background:#0D0501;
 }
-/* ── VIDEO BACKGROUND ── */
 .hero-video-wrap{
-  position:absolute;inset:0;overflow:hidden;
-  z-index:0;
+  position:absolute;inset:0;overflow:hidden;z-index:0;
 }
 .hero-video-wrap video{
   width:100%;height:100%;
   object-fit:cover;object-position:center top;
   display:block;
 }
-.hero-photo-fallback{display:none;}
 /* Parallax layer (JS will set transform) */
-/* .hero-bg removed — using video + fallback */
 .hero-overlay{
-  position:absolute;inset:0;z-index:2;
+  position:absolute;inset:0;
   background:linear-gradient(
     160deg,
     rgba(16,7,2,0.76) 0%,
@@ -330,7 +326,7 @@ nav,main,section,div.strip,footer,a.wa-float,div.lightbox{position:relative;z-in
   pointer-events:none;z-index:0;
 }
 .hero-vignette{
-  position:absolute;inset:0;pointer-events:none;z-index:2;
+  position:absolute;inset:0;pointer-events:none;z-index:1;
   background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 50%,rgba(10,4,1,0.3) 100%);
 }
 /* 4 corner sun-compass ornaments */
@@ -347,7 +343,7 @@ nav,main,section,div.strip,footer,a.wa-float,div.lightbox{position:relative;z-in
   width:min(440px,68vw);opacity:0.042;z-index:1;
   color:#E8C870;pointer-events:none;
 }
-.hero-inner{position:relative;z-index:4;max-width:760px;margin-inline:auto;}
+.hero-inner{position:relative;z-index:2;max-width:760px;margin-inline:auto;}
 /* Orbital ring */
 .hero-ring{
   position:absolute;
@@ -993,17 +989,8 @@ nav,main,section,div.strip,footer,a.wa-float,div.lightbox{position:relative;z-in
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="home" aria-label="כותרת ראשית">
-  <!-- VIDEO BACKGROUND -->
-  <!-- VIDEO BACKGROUND — poster= is the native HTML fallback image -->
   <div class="hero-video-wrap">
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      aria-hidden="true"
-    >
+    <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
       <source src="https://pub-19607f5e041c44f8ae63e91fd34727c7.r2.dev/hero-video.mp4" type="video/mp4">
     </video>
   </div>
@@ -1601,7 +1588,7 @@ nav,main,section,div.strip,footer,a.wa-float,div.lightbox{position:relative;z-in
         <p class="t-body reveal d2">כל מסע מתחיל בצעד אחד קטן — שיחה. אני כאן ונשמח לפגוש.</p>
         <div class="contact-links reveal d3">
           <a href="https://wa.me/972528026721" class="contact-link"><span class="contact-link-icon" aria-hidden="true">📱</span><span>וואטסאפ · 052-8026721</span></a>
-          <a href="/cdn-cgi/l/email-protection#d783a4b2b3b2b1bab6b6aeb6b997b0bab6bebbf9b4b8ba" class="contact-link"><span class="contact-link-icon" aria-hidden="true">📧</span><span><span class="__cf_email__" data-cfemail="3a6e495f5e5f5c575b5b435b547a5d575b535614595557">[email&#160;protected]</span></span></a>
+          <a href="mailto:Tsedefmaayan@gmail.com" class="contact-link"><span class="contact-link-icon" aria-hidden="true">📧</span><span>Tsedefmaayan@gmail.com</span></a>
           <a href="https://www.instagram.com/tzedef_maayan" target="_blank" rel="noopener" class="contact-link"><span class="contact-link-icon" aria-hidden="true">🌿</span><span>@tzedef_maayan · אינסטגרם</span></a>
         </div>
       </div>
@@ -1658,7 +1645,7 @@ nav,main,section,div.strip,footer,a.wa-float,div.lightbox{position:relative;z-in
       <nav class="footer-nav" aria-label="ניווט פוטר">
         <div><h4>ניווט</h4><ul><li><a href="#about">אודות</a></li><li><a href="#services">שירותים</a></li><li><a href="#process">התהליך</a></li><li><a href="#testimonials">המלצות</a></li><li><a href="#faq">שאלות נפוצות</a></li></ul></div>
         <div><h4>שירותים</h4><ul><li><a href="#services">קריאות פרטיות</a></li><li><a href="#services">סדנאות קבוצתיות</a></li><li><a href="#services">חץ וקשת</a></li><li><a href="#services">חבילה משולבת</a></li></ul></div>
-        <div><h4>צור קשר</h4><ul><li><a href="https://wa.me/972528026721">וואטסאפ</a></li><li><a href="/cdn-cgi/l/email-protection#411532242524272c202038202f01262c20282d6f222e2c">אימייל</a></li><li><a href="https://www.instagram.com/tzedef_maayan" target="_blank" rel="noopener">אינסטגרם</a></li></ul></div>
+        <div><h4>צור קשר</h4><ul><li><a href="https://wa.me/972528026721">וואטסאפ</a></li><li><a href="mailto:Tsedefmaayan@gmail.com">אימייל</a></li><li><a href="https://www.instagram.com/tzedef_maayan" target="_blank" rel="noopener">אינסטגרם</a></li></ul></div>
       </nav>
     </div>
     <div class="footer-bottom"><span>© 2025 מסע טוטם · כל הזכויות שמורות</span><span>🌿</span></div>
@@ -1672,7 +1659,7 @@ nav,main,section,div.strip,footer,a.wa-float,div.lightbox{position:relative;z-in
   <span>שלחי הודעה</span>
 </a>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ── GEO CANVAS ── */
 (function(){
   var C=document.getElementById('geo-canvas'),ctx=C.getContext('2d'),W,H;
@@ -1782,7 +1769,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
   });
 });
 
-/* video uses native autoplay + poster fallback */
 /* ── HERO PARALLAX ── */
 (function(){
   var hero=document.querySelector('.hero');
@@ -1856,4 +1842,11 @@ function handleSubmit(e){
       msg=f.querySelector('#f-msg').value;
   var nl='%0A';
   var text=encodeURIComponent('שלום! אני ')+encodeURIComponent(name)+nl+
-           encodeURICom
+           encodeURIComponent('טלפון: ')+encodeURIComponent(phone)+nl+
+           encodeURIComponent('שירות: ')+encodeURIComponent(service)+nl+
+           encodeURIComponent('הודעה: ')+encodeURIComponent(msg);
+  window.open('https://wa.me/972528026721?text='+text,'_blank');
+}
+</script>
+</body>
+</html>
